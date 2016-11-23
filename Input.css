@@ -1,0 +1,59 @@
+
+
+.boutonstandard{
+
+  	font:Bold 10px Arial;
+  	color:black;
+  	width:90px;
+    padding:6px 0 6px 0;
+    border: none;
+  }
+
+.boutonstylerond{
+
+    width: 85px;
+    height: 85px;
+    font:Bold 13px Arial;
+    border-radius: 50%;
+    color: black;
+    display:inline;
+}
+
+.ombrebouton{
+	padding:8px 0 8px 0;
+	box-shadow:8px 8px 13px #999;
+	font:bold 13px Arial;
+	color:black;
+  display: inline;
+}
+
+.boutonsmall{
+
+  width: 50px;
+  height: 50px;
+  color: black;
+  font:Bold 6px Arial;
+  display: inline;
+}
+
+.boutonmedium{
+  width:100px;
+  height: 100px;
+  padding:8px 0 8px 0;
+  font: Bold 9px Arial;
+  color: black;
+  display: inline;
+
+}
+
+.boutonbig{
+
+  font:Bold 30px Arial;
+  color:black;
+  width:  180px;
+  height: 150px;
+  padding:8px 0 8px 0;
+  display: inline;
+
+
+}
