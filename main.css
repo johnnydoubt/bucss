@@ -1,0 +1,171 @@
+body {
+    background: red;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(green, yellow);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(green, yellow);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(green, yellow);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(green, yellow);
+    /* Standard syntax */
+}
+
+h1, main {
+    clear: both;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Ravi Prakash', cursive;
+    font-size: 60px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.dollar {
+    float: left;
+    width: 22%;
+    left: 8%;
+    margin-bottom: 6px;
+    position: absolute;
+}
+
+.icon-responsive {
+    width: 19%;
+    right: 20%;
+    margin-bottom: 10px;
+    position: absolute;
+}
+
+.p-title {
+    font-family: 'Ravi Prakash', cursive;
+    color: black;
+    text-align: center;
+    font-size: 42px;
+    background: -webkit-linear-gradient(#ffffff, #025600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 110px;
+    margin-bottom: 0px;
+}
+
+.dl {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f));
+	background:-moz-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-webkit-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-o-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-ms-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f',GradientType=0);
+	background-color:#f24537;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.dl:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
+	background:-moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-webkit-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-o-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-ms-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537',GradientType=0);
+	background-color:#c62d1f;
+}
+.dl:active {
+	position:relative;
+	top:1px;
+}
+
+.marg-top{
+  margin-top: 6em;
+}
+
+
+h2, h3, h4 {
+    color: white;
+    font-weight: bold;
+}
+
+h5 {
+    color: #19636d;
+    text-align: center;
+}
+
+@media screen and (min-width: 100px) and (max-width: 991px) {
+    .col-desktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 3000px) {
+    .col-mobile {
+        display: none;
+    }
+}
+
+.cadre1 {
+    background: gray;
+}
+
+.cadre2 {
+    background: #FF5722;
+}
+
+.blue {
+    background: #3949AB;
+}
+
+.violet {
+    background: #673AB7;
+}
+
+.yellow {
+    background: #FFD600;
+}
+
+.green {
+    background: #4CAF50;
+}
+
+.orange {
+    background: #EF6C00;
+}
+
+.main2 {
+    margin-top: 180px;
+}
+
+.ground {
+    background: #68f963;
+    border: 1px solid #eee;
+    box-sizing: border-box
+}
+
+.ctr {
+    text-align: center;
+    padding: 1em;
+    background: rgb(45, 45, 45);
+    ;
+    color: white;
+    font-weight: bold;
+    font-family: 'Ravi Prakash', cursive;
+    font-size: 30px;
+}
