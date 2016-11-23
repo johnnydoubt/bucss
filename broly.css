@@ -1,0 +1,435 @@
+/* =========================================
+== BUCSS | SimplOnMars | Version 1.01 ==
+============================================ */
+
+/* Sommaire du Frameworks: ====================
+
+	1/ Normalisation du DOM
+	2/ Système de Classe agile
+	3/ Divers Boutons
+	4/ Menu de nav
+
+================================================ */
+
+/* 1ère Partie: La Normalisation */
+
+/* 	Mise en conformité du socle global de la page, quelque soit le navigateur utilisé
+=====================================================================================*/
+
+*{
+	margin: 0;							/* Fixage des différentes Margin Padding qui peuvent se glisser */
+	padding: 0;							/* et déplacer des éléments de la page insidieusement */
+	text-decoration: none;	/* Parce que les soulignages intempestifs; non! */
+	list-style: none;				/* Les puces, c'est pas beau; sauf si on les désires sur la page */
+	text-align: center;			/* C'est plus joli quand c'est centré, non? */
+	font-size: 1em;					/* Cela permet de mettre toutes les polices au même niveau */
+}
+
+body{
+	font-family: serif;			/* On harmonise ici la police utilisé par défaut dans les navigateurs */
+	line-height: 1.5;				/* Et ici, on fixe par défaut une taille entre les lignes de texte */
+}
+
+/* 	Mise en place des display de zone pour fixer les différents cas de figure possible selon les navigateurs
+	======================================================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section{
+  display: block;					/* Ici, aucun risque d'incompréhension sur le display de ces balise HTML; */
+}													/* Elles seront toutes en block, pour une meilleure prise en charge */
+
+audio, canvas, video, progress {
+  display: inline-block;	/* Ceux ci par contre seront en inline-block pour permettre d'en changer */
+}													/* Les tailles à volonté mais qu'elles ne prennent pas toute la place en largeur */
+													/* Pour rien */
+summary {
+  display: list-item;			/* Permet de placer summary sur un display correspondant à son utilité */
+}													/* principale; à savoir une partie dissimulé pouvant être ouverte à volonté */
+
+/* ================================= A Compiler avec la partie du dessus; harmoniser en gros ============== */
+
+/* classes concernant les flottants */
+
+.floatL{
+  float: left;
+}
+
+.floatR{
+  float: right;
+}
+
+.clearL{
+  clear: left;
+}
+
+.clearR{
+  clear: right;
+}
+
+.clearfix{
+  clear: both;
+}
+
+/* Classes de positionnement */
+
+.posabs{
+  position: absolute;
+}
+
+.posrel{
+  position: relative;
+}
+
+.posfix{
+  position: fixed;
+}
+
+/* Classe de display */
+
+.disbl{
+  display: block;
+}
+
+.disinbl{
+  display: inline-block;
+}
+
+.disin{
+  display: inline;
+}
+
+.disf{
+  display: flex;
+}
+
+.disg{
+  display: grid;
+}
+
+.dist{
+  display: table;
+}
+
+.dis0{
+  display: none;
+}
+
+/* Classe d'option sur le flexbox */
+
+.fl1{
+  flex: 1;
+}
+
+.fl2{
+  flex: 2;
+}
+
+.fl3{
+  flex: 3;
+}
+
+.flxw {
+	flex-wrap: wrap;
+}
+
+.flxnw {
+	flex-wrap: nowrap;
+}
+
+.flxwr {
+	flex-wrap: wrap-reverse;
+}
+
+.flxrr{
+  flex-direction: row-reverse;
+}
+
+.flxdc{
+  flex-direction: column;
+}
+
+.flxdcr{
+  flex-direction: column-reverse;;
+}
+
+.jstfs{
+  justify-content: flex-start;
+}
+
+.jstfe{
+  justify-content: flex-end;
+}
+
+.jstc{
+  justify-content: center;
+}
+
+.jstsb{
+  justify-content: space-between;
+}
+
+.jstsa{
+  justify-content: space-around;
+}
+
+.alic{
+  align-items: center;
+}
+
+/* Alignement du texte */
+
+.txtac{
+  text-align: center;
+}
+
+.txtaj{
+  text-align: justify;
+}
+
+.txtal{
+  text-align: left;
+}
+
+.txtar{
+  text-align: right;
+}
+
+/* Classes de bordure */
+
+/* Style de bordure */
+
+.brdso{
+  border-style: solid;
+}
+
+.brddo{
+  border-style: dotted;
+}
+
+.brdda{
+  border-style: dashed;
+}
+
+.brddou{
+  border-style: double;
+}
+
+.brdgr{
+  border-style: groove;
+}
+
+.brdri{
+  border-style: ridge;
+}
+
+.brdin{
+  border-style: inset;
+}
+
+.brdou{
+  border-style: outset;
+}
+
+/* Couleur de la bordure */
+
+.brdcbl{
+  border-color: black;
+}
+
+.brdcwh{
+  border-color: white;
+}
+
+.brdcred{
+  border-color: red;
+}
+
+.brdcor{
+  border-color: orange;
+}
+
+.brdc{
+  border-color: yellow;
+}
+
+.brdcgr{
+  border-color: green;
+}
+
+.brdcbl{
+  border-color: blue;
+}
+
+.brdcpu{
+  border-color: purple;
+}
+
+/* Classes utilitaire pour les fonts */
+
+.ftwbolr{
+  font-weight: bolder;
+}
+
+.ftwbol{
+  font-weight: bold;
+}
+
+.ftwlgr{
+  font-weight: lighter;
+}
+
+/* Couleur de font */
+
+.ftwh{
+  color: white;
+}
+
+.ftred{
+  color: red;
+}
+
+.ftora{
+  color: orange;
+}
+
+.ftye{
+  color: yellow;
+}
+
+.ftgr{
+  color: green;
+}
+
+.ftbl{
+  color: blue;
+}
+
+.ftpu{
+  color: purple;
+}
+
+/* Classes de Background */
+
+.bckcwh{
+  background-color: white;
+}
+
+.bckcred{
+  background-color: red;
+}
+
+.bckcora{
+  background-color: orange;
+}
+
+.bckcye{
+  background-color: yellow;
+}
+
+.bckcgr{
+  background-color: green;
+}
+
+.bckcbl{
+  background-color: blue;
+}
+
+.bckcpu{
+  background-color: purple;
+}
+
+.bckrr0{
+  background-repeat: no-repeat;
+}
+
+.bckrro{
+  background-repeat: round;
+}
+
+/* Localisation des positionnements */
+
+.t0l0{
+  top: 0;
+  left: 0;
+}
+
+.t0r0{
+  top: 0;
+  right: 0;
+}
+
+.b0l0{
+  bottom: 0;
+  left: 0;
+}
+
+.b0r0{
+  bottom: 0;
+  right: 0;
+}
+
+.t5l5{
+  top: 50%;
+  left: 50%;
+}
+
+.t0l5{
+  top: 0;
+  left: 50%;
+}
+
+.t5r0{
+  top: 50%;
+  right: 0;
+}
+
+.b0l5{
+  bottom: 0;
+  left: 50%;
+}
+
+.t5l0{
+  top: 50%;
+  left: 0;
+}
+
+/* Niveau d'opacité */
+
+.op0{
+  opacity: 0;
+}
+
+.op1{
+  opacity: 0.1;
+}
+
+.op2{
+  opacity: 0.2;
+}
+
+.op3{
+  opacity: 0.3;
+}
+
+.op4{
+  opacity: 0.4;
+}
+
+.op5{
+  opacity: 0.5;
+}
+
+.op6{
+  opacity: 0.6;
+}
+
+.op7{
+  opacity: 0.7;
+}
+
+.op8{
+  opacity: 0.8;
+}
+
+.op9{
+  opacity: 0.9;
+}
