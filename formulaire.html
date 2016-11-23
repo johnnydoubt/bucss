@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Formulaire.css" media="screen" title="no title">
+    <title>Type de Formulaire</title>
+  </head>
+  <body>
+
+
+
+
+<form method="post" action="Test.php" class="containerform" >
+
+
+
+<fieldset class="formzone">
+ <legend class="zoneinfo">Vos coordonnées :</legend>
+ <label class ="intitultext">"Intitulé du champ" :</label></br>
+ <input class="boutonradio" type="radio"  name="intitulé" value="élément">Votre élément</input>
+ <input class="boutonradio" type="radio"  name="intitulé" value="élément">Votre élément</input> <!--Un seul choix possible-->
+ <p>
+    <label class="intitultext">"Intitulé du champ":</label>
+    <input class="zonetext" type="text" name="Nom" id="Nom" size ="25" maxlenght="15"/></br> <!-- Que du Texte par ici-->
+    </p>
+
+    <p>
+    <br><label class="intitultext">"Intitulé du champ":</label>
+    <input class="zonenumber" type="number" name="âge" id="âge" min="5" max="99"/></br><!--Que du nombre par ici-->
+  </p>
+
+  <p>
+   <br><label class="intitultext">"Intitulé du champ":</label>
+  <input class="zonemail" type="email" name="mail" id="email" size="20" maxlenght="40"/></br>
+  </p>
+
+  <p>
+  <br><label class="intitultext">"Intitulé du champ":</label>
+  <input class="zonepassword" type="password" name="mdp" id="mdp" size="25" maxlenght="15"/></br>
+ </p>
+
+ <p>
+ <br><label class="intitultext">"Intitulé du champ" :</label>
+ <input class="zonepassword" type="password" name="mdp1" id="mdp1" size="25" maxlenght="15"/></br>
+</p>
+
+<label class="intitultext">"Intitulé du champ" :</label>
+<textarea  class="zonecom" name="commentaire" id="commentaire" cols="20" rows="4">
+</textarea>
+
+</fieldset>
+
+
+ <p>
+ <input class="boutonenvoi" type="submit" value="Envoyer" />
+ <input class="boutonannul" type="reset" value="Annuler" />
+ </p>
