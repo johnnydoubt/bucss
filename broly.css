@@ -85,111 +85,111 @@ summary {
 
 /* Classe de display */
 
-.blockybox{
+.disbl{
   display: block;
 }
 
-.inblokybox{
+.disinbl{
   display: inline-block;
 }
 
-.inlybox{
+.disin{
   display: inline;
 }
 
-.flexybox{
+.disf{
   display: flex;
 }
 
-.gridybox{
+.disg{
   display: grid;
 }
 
-.tablebox{
+.dist{
   display: table;
 }
 
-.no_display{
+.dis0{
   display: none;
 }
 
 /* Classe d'option sur le flexbox */
 
-.flexbase{
+.fl1{
   flex: 1;
 }
 
-.doduoflex{
+.fl2{
   flex: 2;
 }
 
-.dotrioflex{
+.fl3{
   flex: 3;
 }
 
-.flexywrap {
+.flxw {
 	flex-wrap: wrap;
 }
 
-.no_wrapflex {
+.flxnw {
 	flex-wrap: nowrap;
 }
 
-.rev_wrapflex {
+.flxwr {
 	flex-wrap: wrap-reverse;
 }
 
-.rev_rowdir{
+.flxrr{
   flex-direction: row-reverse;
 }
 
-.columndir{
+.flxdc{
   flex-direction: column;
 }
 
-.rev_columndir{
+.flxdcr{
   flex-direction: column-reverse;;
 }
 
-.jst_start{
+.jstfs{
   justify-content: flex-start;
 }
 
-.jst_end{
+.jstfe{
   justify-content: flex-end;
 }
 
-.jst_center{
+.jstc{
   justify-content: center;
 }
 
-.jst_between{
+.jstsb{
   justify-content: space-between;
 }
 
-.jst_around{
+.jstsa{
   justify-content: space-around;
 }
 
-.aligncenter{
+.alic{
   align-items: center;
 }
 
 /* Alignement du texte */
 
-.centertext{
+.txtac{
   text-align: center;
 }
 
-.justitext{
+.txtaj{
   text-align: justify;
 }
 
-.textonleft{
+.txtal{
   text-align: left;
 }
 
-.textonright{
+.txtar{
   text-align: right;
 }
 
@@ -197,239 +197,239 @@ summary {
 
 /* Style de bordure */
 
-.solidborder{
+.brdso{
   border-style: solid;
 }
 
-.dotborder{
+.brddo{
   border-style: dotted;
 }
 
-.dashborder{
+.brdda{
   border-style: dashed;
 }
 
-.duoborder{
+.brddou{
   border-style: double;
 }
 
-.groovyborder{
+.brdgr{
   border-style: groove;
 }
 
-.ridgborder{
+.brdri{
   border-style: ridge;
 }
 
-.inborder{
+.brdin{
   border-style: inset;
 }
 
-.outborder{
+.brdou{
   border-style: outset;
 }
 
 /* Couleur de la bordure */
 
-.blackborder{
+.brdcbl{
   border-color: black;
 }
 
-.whiteborder{
+.brdcwh{
   border-color: white;
 }
 
-.redborder{
+.brdcred{
   border-color: red;
 }
 
-.orangeborder{
+.brdcor{
   border-color: orange;
 }
 
-.yellowborder{
+.brdc{
   border-color: yellow;
 }
 
-.greenborder{
-  border-color: yellow;
+.brdcgr{
+  border-color: green;
 }
 
-.blueborder{
+.brdcbl{
   border-color: blue;
 }
 
-.purpleborder{
+.brdcpu{
   border-color: purple;
 }
 
 /* Classes utilitaire pour les fonts */
 
-.bolderfont{
+.ftwbolr{
   font-weight: bolder;
 }
 
-.boldfont{
+.ftwbol{
   font-weight: bold;
 }
 
-.lightfont{
+.ftwlgr{
   font-weight: lighter;
 }
 
 /* Couleur de font */
 
-.whitefont{
+.ftwh{
   color: white;
 }
 
-.redfont{
+.ftred{
   color: red;
 }
 
-.orangefont{
+.ftora{
   color: orange;
 }
 
-.yellowfont{
+.ftye{
   color: yellow;
 }
 
-.greenfont{
+.ftgr{
   color: green;
 }
 
-.bluefont{
+.ftbl{
   color: blue;
 }
 
-.purplefont{
+.ftpu{
   color: purple;
 }
 
 /* Classes de Background */
 
-.whitebck{
+.bckcwh{
   background-color: white;
 }
 
-.redbck{
+.bckcred{
   background-color: red;
 }
 
-.orangebck{
+.bckcora{
   background-color: orange;
 }
 
-.yellowbck{
+.bckcye{
   background-color: yellow;
 }
 
-.greenbck{
+.bckcgr{
   background-color: green;
 }
 
-.bluebck{
+.bckcbl{
   background-color: blue;
 }
 
-.purplebck{
+.bckcpu{
   background-color: purple;
 }
 
-.bcknorepeat{
+.bckrr0{
   background-repeat: no-repeat;
 }
 
-.bckrndrepeat{
+.bckrro{
   background-repeat: round;
 }
 
 /* Localisation des positionnements */
 
-.ontopleft{
+.t0l0{
   top: 0;
   left: 0;
 }
 
-.ontopright{
+.t0r0{
   top: 0;
   right: 0;
 }
 
-.onbotleft{
+.b0l0{
   bottom: 0;
   left: 0;
 }
 
-.onbotright{
+.b0r0{
   bottom: 0;
   right: 0;
 }
 
-.oncenter{
+.t5l5{
   top: 50%;
   left: 50%;
 }
 
-.centertop{
+.t0l5{
   top: 0;
   left: 50%;
 }
 
-.centeright{
+.t5r0{
   top: 50%;
   right: 0;
 }
 
-.centerbot{
+.b0l5{
   bottom: 0;
   left: 50%;
 }
 
-.centerleft{
+.t5l0{
   top: 50%;
   left: 0;
 }
 
 /* Niveau d'opacité */
 
-.optransparent{
+.op0{
   opacity: 0;
 }
 
-.opten{
+.op1{
   opacity: 0.1;
 }
 
-.optw{
+.op2{
   opacity: 0.2;
 }
 
-.opth{
+.op3{
   opacity: 0.3;
 }
 
-.opfo{
+.op4{
   opacity: 0.4;
 }
 
-.opfi{
+.op5{
   opacity: 0.5;
 }
 
-.opsi{
+.op6{
   opacity: 0.6;
 }
 
-.opse{
+.op7{
   opacity: 0.7;
 }
 
-.ophe{
+.op8{
   opacity: 0.8;
 }
 
-.opni{
+.op9{
   opacity: 0.9;
 }
