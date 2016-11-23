@@ -1,0 +1,435 @@
+/* =========================================
+== BUCSS | SimplOnMars | Version 1.01 ==
+============================================ */
+
+/* Sommaire du Frameworks: ====================
+
+	1/ Normalisation du DOM
+	2/ Système de Classe agile
+	3/ Divers Boutons
+	4/ Menu de nav
+
+================================================ */
+
+/* 1ère Partie: La Normalisation */
+
+/* 	Mise en conformité du socle global de la page, quelque soit le navigateur utilisé
+=====================================================================================*/
+
+*{
+	margin: 0;							/* Fixage des différentes Margin Padding qui peuvent se glisser */
+	padding: 0;							/* et déplacer des éléments de la page insidieusement */
+	text-decoration: none;	/* Parce que les soulignages intempestifs; non! */
+	list-style: none;				/* Les puces, c'est pas beau; sauf si on les désires sur la page */
+	text-align: center;			/* C'est plus joli quand c'est centré, non? */
+	font-size: 1em;					/* Cela permet de mettre toutes les polices au même niveau */
+}
+
+body{
+	font-family: serif;			/* On harmonise ici la police utilisé par défaut dans les navigateurs */
+	line-height: 1.5;				/* Et ici, on fixe par défaut une taille entre les lignes de texte */
+}
+
+/* 	Mise en place des display de zone pour fixer les différents cas de figure possible selon les navigateurs
+	======================================================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section{
+  display: block;					/* Ici, aucun risque d'incompréhension sur le display de ces balise HTML; */
+}													/* Elles seront toutes en block, pour une meilleure prise en charge */
+
+audio, canvas, video, progress {
+  display: inline-block;	/* Ceux ci par contre seront en inline-block pour permettre d'en changer */
+}													/* Les tailles à volonté mais qu'elles ne prennent pas toute la place en largeur */
+													/* Pour rien */
+summary {
+  display: list-item;			/* Permet de placer summary sur un display correspondant à son utilité */
+}													/* principale; à savoir une partie dissimulé pouvant être ouverte à volonté */
+
+/* ================================= A Compiler avec la partie du dessus; harmoniser en gros ============== */
+
+/* classes concernant les flottants */
+
+.floatL{
+  float: left;
+}
+
+.floatR{
+  float: right;
+}
+
+.clearL{
+  clear: left;
+}
+
+.clearR{
+  clear: right;
+}
+
+.clearfix{
+  clear: both;
+}
+
+/* Classes de positionnement */
+
+.posabs{
+  position: absolute;
+}
+
+.posrel{
+  position: relative;
+}
+
+.posfix{
+  position: fixed;
+}
+
+/* Classe de display */
+
+.blockybox{
+  display: block;
+}
+
+.inblokybox{
+  display: inline-block;
+}
+
+.inlybox{
+  display: inline;
+}
+
+.flexybox{
+  display: flex;
+}
+
+.gridybox{
+  display: grid;
+}
+
+.tablebox{
+  display: table;
+}
+
+.no_display{
+  display: none;
+}
+
+/* Classe d'option sur le flexbox */
+
+.flexbase{
+  flex: 1;
+}
+
+.doduoflex{
+  flex: 2;
+}
+
+.dotrioflex{
+  flex: 3;
+}
+
+.flexywrap {
+	flex-wrap: wrap;
+}
+
+.no_wrapflex {
+	flex-wrap: nowrap;
+}
+
+.rev_wrapflex {
+	flex-wrap: wrap-reverse;
+}
+
+.rev_rowdir{
+  flex-direction: row-reverse;
+}
+
+.columndir{
+  flex-direction: column;
+}
+
+.rev_columndir{
+  flex-direction: column-reverse;;
+}
+
+.jst_start{
+  justify-content: flex-start;
+}
+
+.jst_end{
+  justify-content: flex-end;
+}
+
+.jst_center{
+  justify-content: center;
+}
+
+.jst_between{
+  justify-content: space-between;
+}
+
+.jst_around{
+  justify-content: space-around;
+}
+
+.aligncenter{
+  align-items: center;
+}
+
+/* Alignement du texte */
+
+.centertext{
+  text-align: center;
+}
+
+.justitext{
+  text-align: justify;
+}
+
+.textonleft{
+  text-align: left;
+}
+
+.textonright{
+  text-align: right;
+}
+
+/* Classes de bordure */
+
+/* Style de bordure */
+
+.solidborder{
+  border-style: solid;
+}
+
+.dotborder{
+  border-style: dotted;
+}
+
+.dashborder{
+  border-style: dashed;
+}
+
+.duoborder{
+  border-style: double;
+}
+
+.groovyborder{
+  border-style: groove;
+}
+
+.ridgborder{
+  border-style: ridge;
+}
+
+.inborder{
+  border-style: inset;
+}
+
+.outborder{
+  border-style: outset;
+}
+
+/* Couleur de la bordure */
+
+.blackborder{
+  border-color: black;
+}
+
+.whiteborder{
+  border-color: white;
+}
+
+.redborder{
+  border-color: red;
+}
+
+.orangeborder{
+  border-color: orange;
+}
+
+.yellowborder{
+  border-color: yellow;
+}
+
+.greenborder{
+  border-color: yellow;
+}
+
+.blueborder{
+  border-color: blue;
+}
+
+.purpleborder{
+  border-color: purple;
+}
+
+/* Classes utilitaire pour les fonts */
+
+.bolderfont{
+  font-weight: bolder;
+}
+
+.boldfont{
+  font-weight: bold;
+}
+
+.lightfont{
+  font-weight: lighter;
+}
+
+/* Couleur de font */
+
+.whitefont{
+  color: white;
+}
+
+.redfont{
+  color: red;
+}
+
+.orangefont{
+  color: orange;
+}
+
+.yellowfont{
+  color: yellow;
+}
+
+.greenfont{
+  color: green;
+}
+
+.bluefont{
+  color: blue;
+}
+
+.purplefont{
+  color: purple;
+}
+
+/* Classes de Background */
+
+.whitebck{
+  background-color: white;
+}
+
+.redbck{
+  background-color: red;
+}
+
+.orangebck{
+  background-color: orange;
+}
+
+.yellowbck{
+  background-color: yellow;
+}
+
+.greenbck{
+  background-color: green;
+}
+
+.bluebck{
+  background-color: blue;
+}
+
+.purplebck{
+  background-color: purple;
+}
+
+.bcknorepeat{
+  background-repeat: no-repeat;
+}
+
+.bckrndrepeat{
+  background-repeat: round;
+}
+
+/* Localisation des positionnements */
+
+.ontopleft{
+  top: 0;
+  left: 0;
+}
+
+.ontopright{
+  top: 0;
+  right: 0;
+}
+
+.onbotleft{
+  bottom: 0;
+  left: 0;
+}
+
+.onbotright{
+  bottom: 0;
+  right: 0;
+}
+
+.oncenter{
+  top: 50%;
+  left: 50%;
+}
+
+.centertop{
+  top: 0;
+  left: 50%;
+}
+
+.centeright{
+  top: 50%;
+  right: 0;
+}
+
+.centerbot{
+  bottom: 0;
+  left: 50%;
+}
+
+.centerleft{
+  top: 50%;
+  left: 0;
+}
+
+/* Niveau d'opacité */
+
+.optransparent{
+  opacity: 0;
+}
+
+.opten{
+  opacity: 0.1;
+}
+
+.optw{
+  opacity: 0.2;
+}
+
+.opth{
+  opacity: 0.3;
+}
+
+.opfo{
+  opacity: 0.4;
+}
+
+.opfi{
+  opacity: 0.5;
+}
+
+.opsi{
+  opacity: 0.6;
+}
+
+.opse{
+  opacity: 0.7;
+}
+
+.ophe{
+  opacity: 0.8;
+}
+
+.opni{
+  opacity: 0.9;
+}
