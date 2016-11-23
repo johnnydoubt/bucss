@@ -1,54 +1,67 @@
-body {
-    background-image: url(http://www.planwallpaper.com/static/images/beautiful-sunset-images-196063.jpg);
+/* =========================================================
+====== BUCSS | SimplOnMars | Version 1.31 ==================
+============================================================
+============================================================
+======= Sommaire du Frameworks: ============================
+==                                                        ==
+==	 I/   Petit Système de Normalisation                  ==
+==	 II/  Système de Classe agile                         ==
+==	 III/ Système de Grille Responsive                    ==
+==	 IV/  Navigateur, Boutons et Footer standardisé       ==
+==                                                        ==
+============================================================ */
+
+
+/* =========================================================
+                        Partie I 
+                      Normalisation                         
+   ========================================================= */
+
+/* 	1/ Mise en conformité du socle global de la page, quelque soit le navigateur utilisé
+========================================================================================*/
+
+*{
+	margin: 0;							
+	padding: 0;							
+	text-decoration: none;	
+	list-style: none;				
+	text-align: center;			
+	font-size: 1em;					
 }
 
-h1, h2, h3, h4, h5, h6, .h1-type, .h2-type, .h3-type, .h4-type, .h5-type, .h6-type {
-    font-family: Arial;
-    margin: auto;
+body{
+	font-family: serif;			
+	line-height: 1.5;				
 }
 
-.h1-type, h1 {
-    font-size: 3.2rem;
+*, :after, :before {
+    -webkit-box-sizing: border-box;                           
+    -moz-box-sizing: border-box;                              
+    box-sizing: border-box                                   
 }
 
-.h2-type, h2 {
-    font-size: 2.8rem;
+/* 2/	Mise en place des display de zone pour fixer les différents cas de figure possible selon les navigateurs
+	============================================================================================================ */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section{
+  display: block;					
+}													
+
+audio, canvas, video, progress {
+  display: inline-block;	
+}													
+													
+summary {
+  display: list-item;			
 }
 
-.h3-type, h3 {
-    font-size: 2.4rem;
-}
+/* 3/ Autre reset bien utile 
+  ========================== */											
 
-.h4-type, h4 {
-    font-size: 2rem;
-}
-
-.h5-type, h5 {
-    font-size: 1.8rem;
-}
-
-.h6-type, h6 {
-    font-size: 1.6rem;
-}
-
-.smaller {
-    font-size: .6em
-}
-
-.small {
-    font-size: .8em
-}
-
-.big {
-    font-size: 1.2em
-}
-
-.bigger {
-    font-size: 1.5em
-}
-
-.biggest {
-    font-size: 2em
+img {
+    max-width: 100%!important;                                  
+    vertical-align: middle;
+    background-position: center left;                          
 }
 
 table {
@@ -63,58 +76,240 @@ th {
     text-align: left;
 }
 
-.table {
-    max-width: 100%;
-    margin-bottom: 20px;
+/* =========================================================
+                        Partie II 
+                      Classes Agile                         
+   =========================================================
+
+      Sommaire 
+      ==================================================
+
+      1/  Classe Container et Media Querie du container
+      2/  Display
+      3/  Positionnement
+      4/  Flottant
+      5/  Gestion des Largeurs
+      6/  Gestion des différents Margin
+      7/  Gestion des différents Padding
+      8/  Gestion des Background
+      9/  Gestion des Polices
+      10/ Gestion des Bordures
+      11/ Classe inclassable
+
+     =================================================== */
+
+/* 1/ Container
+   ============ */
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.footer1 {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    font-size: 14px;
-    text-align: left;
-    list-style: none;
-    border: 2px solid #ccc;
-    background-color: transparent;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .1);
+/* Media Queries pour le Container */
+
+
+@media (min-width:768px) {
+    .container {
+        width: 750px
+    }
 }
 
-.footer2 {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    float: left;
-    min-width: 200px;
-    padding: 7px 0;
-    margin: 3px 0 0;
-    font-size: 12px;
-    text-align: left;
-    list-style: none;
-    border: 4px solid #ccc;
-    border-top-right-radius: 5%;
-    border-top-left-radius: 5%;
-    background-color: transparent;
-    box-shadow: inset 0 0 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .1);
+@media (min-width:992px) {
+    .container {
+        width: 970px
+    }
 }
 
-.navbar1 {
-    background-image: url(/home/kloporth/Bureau/1350902909-30185000.jpg);
-    padding: 10px 15px;
-    margin-top: 8px;
-    margin-right: -15px;
-    margin-bottom: 8px;
-    margin-left: -15px;
-    border-top: 2px solid #ccc;
-    border-bottom: 2px solid #ccc;
-    box-shadow: inset 0 3px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .1);
+
+@media (min-width:1200px) {
+    .container {
+        width: 990px
+    }
 }
+
+/* 2/ Display
+   ========== */
+
+.disbl{
+  display: block;
+}
+
+.disinbl{
+  display: inline-block;
+}
+
+.disin{
+  display: inline;
+}
+
+.disf{
+  display: flex;
+}
+
+.disg{
+  display: grid;
+}
+
+.dist{
+  display: table;
+}
+
+.dis0{
+  display: none;
+}
+
+/* Option supplémentaire pour Flexbox */
+
+.fl1{
+  flex: 1;
+}
+
+.fl2{
+  flex: 2;
+}
+
+.fl3{
+  flex: 3;
+}
+
+.flxw {
+  flex-wrap: wrap;
+}
+
+.flxnw {
+  flex-wrap: nowrap;
+}
+
+.flxwr {
+  flex-wrap: wrap-reverse;
+}
+
+.flxrr{
+  flex-direction: row-reverse;
+}
+
+.flxdc{
+  flex-direction: column;
+}
+
+.flxdcr{
+  flex-direction: column-reverse;;
+}
+
+.jstfs{
+  justify-content: flex-start;
+}
+
+.jstfe{
+  justify-content: flex-end;
+}
+
+.jstc{
+  justify-content: center;
+}
+
+.jstsb{
+  justify-content: space-between;
+}
+
+.jstsa{
+  justify-content: space-around;
+}
+
+.alic{
+  align-items: center;
+}
+
+/* 3/ Positionnement 
+   ================= */
+
+.posabs{
+  position: absolute;
+}
+
+.posrel{
+  position: relative;
+}
+
+.posfix{
+  position: fixed;
+}
+
+/* Raccourcis pour positionnement */
+
+.t0l0{
+  top: 0;
+  left: 0;
+}
+
+.t0r0{
+  top: 0;
+  right: 0;
+}
+
+.b0l0{
+  bottom: 0;
+  left: 0;
+}
+
+.b0r0{
+  bottom: 0;
+  right: 0;
+}
+
+.t5l5{
+  top: 50%;
+  left: 50%;
+}
+
+.t0l5{
+  top: 0;
+  left: 50%;
+}
+
+.t5r0{
+  top: 50%;
+  right: 0;
+}
+
+.b0l5{
+  bottom: 0;
+  left: 50%;
+}
+
+.t5l0{
+  top: 50%;
+  left: 0;
+}
+
+/* 4/ Flottant
+   =========== */
+
+.floatL{
+  float: left;
+}
+
+.floatR{
+  float: right;
+}
+
+.clearL{
+  clear: left;
+}
+
+.clearR{
+  clear: right;
+}
+
+.clearfix{
+  clear: both;
+}
+
+/* 5/ Gestion des Largeurs 
+   ======================= */
+
+/* Largeur en % */
 
 .w10 {
     width: 10%
@@ -172,6 +367,8 @@ th {
     width: 100%
 }
 
+/* Largeur en Pixel */
+
 .w50p {
     width: 50px
 }
@@ -196,12 +393,11 @@ th {
     width: auto
 }
 
+/* 6/ Gestion des différents Margin 
+   ================================ */
+
 .m0, {
     margin: 0
-}
-
-.p0, {
-    padding: 0
 }
 
 .ms {
@@ -216,17 +412,7 @@ th {
     margin: 4rem
 }
 
-.ps {
-    padding: 1rem
-}
-
-.pm {
-    padding: 2rem
-}
-
-.pl {
-    padding: 4rem
-}
+/* Margin Top */
 
 .mt0, {
     margin-top: 0
@@ -244,6 +430,8 @@ th {
     margin-top: 4rem
 }
 
+/* Margin Right */
+
 .mr0, {
     margin-right: 0
 }
@@ -259,6 +447,8 @@ th {
 .mrl {
     margin-right: 4rem
 }
+
+/* Margin Bottom */
 
 .mb0, {
     margin-bottom: 0
@@ -276,6 +466,8 @@ th {
     margin-bottom: 4rem
 }
 
+/* Margin Left */
+
 .ml0, {
     margin-left: 0
 }
@@ -291,6 +483,8 @@ th {
 .mll {
     margin-left: 4rem
 }
+
+/* Margin Auto */
 
 .mauto {
     margin: auto
@@ -312,6 +506,33 @@ th {
     margin-left: auto
 }
 
+/* 7/ Gestion des différents Padding 
+   =================================  */
+
+.p0, {
+    padding: 0
+}
+
+.ps {
+    padding: 1rem
+}
+
+.pm {
+    padding: 2rem
+}
+
+.pl {
+    padding: 4rem
+}
+
+.no-marge {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Padding Top */
+
+
 .pt0, {
     padding-top: 0
 }
@@ -327,6 +548,8 @@ th {
 .ptl {
     padding-top: 4rem
 }
+
+/* Padding Right */
 
 .pr0, {
     padding-right: 0
@@ -344,6 +567,8 @@ th {
     padding-right: 4rem
 }
 
+/* Padding Bottom */
+
 .pb0, {
     padding-bottom: 0
 }
@@ -360,6 +585,8 @@ th {
     padding-bottom: 4rem
 }
 
+/* Padding Left */
+
 .pl0, {
     padding-left: 0
 }
@@ -375,3 +602,779 @@ th {
 .pll {
     padding-left: 4rem
 }
+
+/* 8/ Gestion des Background 
+   ========================= */
+
+/* Couleurs */
+
+.bckcwh{
+  background-color: white;
+}
+
+.bckcred{
+  background-color: red;
+}
+
+.bckcora{
+  background-color: orange;
+}
+
+.bckcye{
+  background-color: yellow;
+}
+
+.bckcgr{
+  background-color: green;
+}
+
+.bckcbl{
+  background-color: blue;
+}
+
+.bckcpu{
+  background-color: purple;
+}
+
+/* Background-Repeat */
+
+.bckrr0{
+  background-repeat: no-repeat;
+}
+
+.bckrro{
+  background-repeat: round;
+}
+
+/* Opacité de zone */
+
+.op0{
+  opacity: 0;
+}
+
+.op1{
+  opacity: 0.1;
+}
+
+.op2{
+  opacity: 0.2;
+}
+
+.op3{
+  opacity: 0.3;
+}
+
+.op4{
+  opacity: 0.4;
+}
+
+.op5{
+  opacity: 0.5;
+}
+
+.op6{
+  opacity: 0.6;
+}
+
+.op7{
+  opacity: 0.7;
+}
+
+.op8{
+  opacity: 0.8;
+}
+
+.op9{
+  opacity: 0.9;
+}
+
+/* 9/ Gestion des Polices 
+   ====================== */
+
+/* Taille de Police */
+
+.smaller {
+    font-size: .6em
+}
+
+.small {
+    font-size: .8em
+}
+
+.big {
+    font-size: 1.2em
+}
+
+.bigger {
+    font-size: 1.5em
+}
+
+.biggest {
+    font-size: 2em
+}
+
+/* Poids de Police */
+
+.ftwbolr{
+  font-weight: bolder;
+}
+
+.ftwbol{
+  font-weight: bold;
+}
+
+.ftwlgr{
+  font-weight: lighter;
+}
+
+/* Couleur de Police */
+
+.ftwh{
+  color: white;
+}
+
+.ftred{
+  color: red;
+}
+
+.ftora{
+  color: orange;
+}
+
+.ftye{
+  color: yellow;
+}
+
+.ftgr{
+  color: green;
+}
+
+.ftbl{
+  color: blue;
+}
+
+.ftpu{
+  color: purple;
+}
+
+/* Gestion des Tailles de Titre */
+
+
+h1, h2, h3, h4, h5, h6, .h1-type, .h2-type, .h3-type, .h4-type, .h5-type, .h6-type {
+    font-family: Arial;
+    margin: auto;
+}
+
+.h1-type, h1 {
+    font-size: 3.2rem;
+}
+
+.h2-type, h2 {
+    font-size: 2.8rem;
+}
+
+.h3-type, h3 {
+    font-size: 2.4rem;
+}
+
+.h4-type, h4 {
+    font-size: 2rem;
+}
+
+.h5-type, h5 {
+    font-size: 1.8rem;
+}
+
+.h6-type, h6 {
+    font-size: 1.6rem;
+}
+
+/* Alignement de texte */
+
+.txtac{
+  text-align: center;
+}
+
+.txtaj{
+  text-align: justify;
+}
+
+.txtal{
+  text-align: left;
+}
+
+.txtar{
+  text-align: right;
+}
+
+/* 10/ Gestion des Bordures
+   ======================== */
+
+/* Style */
+
+.brdso{
+  border-style: solid;
+}
+
+.brddo{
+  border-style: dotted;
+}
+
+.brdda{
+  border-style: dashed;
+}
+
+.brddou{
+  border-style: double;
+}
+
+.brdgr{
+  border-style: groove;
+}
+
+.brdri{
+  border-style: ridge;
+}
+
+.brdin{
+  border-style: inset;
+}
+
+.brdout{
+  border-style: outset;
+}
+
+/* Couleur */
+
+.brdcbl{
+  border-color: black;
+}
+
+.brdcwh{
+  border-color: white;
+}
+
+.brdcred{
+  border-color: red;
+}
+
+.brdcor{
+  border-color: orange;
+}
+
+.brdc{
+  border-color: yellow;
+}
+
+.brdcgr{
+  border-color: green;
+}
+
+.brdcbl{
+  border-color: blue;
+}
+
+.brdcpu{
+  border-color: purple;
+}
+
+/* 11/ Classe inclassable
+   ====================== */
+
+.rw {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.table {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+/* =========================================================
+                        Partie III
+              Système de Grille à 12 colonnes                        
+   =========================================================
+
+      Sommaire 
+      ==================================================
+
+      1/ Base de la mise en page
+      2/ Dimensions des formats de colonnes
+      3/ Système de placement par la droite
+      4/ Système de placement par la gauche
+      5/ Système de saut de colonne
+      6/ Media Queries
+
+     =================================================== */
+
+/* 1/ Base de la mise en page 
+   ========================== */
+
+.cl-d-1, .cl-d-10, .cl-d-11, .cl-d-12, .cl-d-2, .cl-d-3, .cl-d-4, .cl-d-5, .cl-d-6, .cl-d-7, .cl-d-8, .cl-d-9, .cl-m-1, .cl-m-10, .cl-m-11, .cl-m-12, .cl-m-2, .cl-m-3, .cl-m-4, .cl-m-5, .cl-m-6, .cl-m-7, .cl-m-8, .cl-m-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.cl-m-1, .cl-m-10, .cl-m-11, .cl-m-12, .cl-m-2, .cl-m-3, .cl-m-4, .cl-m-5, .cl-m-6, .cl-m-7, .cl-m-8, .cl-m-9 {
+    float: left
+}
+
+/* 2/ Dimensions des formats de colonnes 
+   ===================================== */
+
+.cl-m-12 {
+    width: 100%
+}
+
+.cl-m-11 {
+    width: 91.66666667%
+}
+
+.cl-m-10 {
+    width: 83.33333333%
+}
+
+.cl-m-9 {
+    width: 75%
+}
+
+.cl-m-8 {
+    width: 66.66666667%
+}
+
+.cl-m-7 {
+    width: 58.33333333%
+}
+
+.cl-m-6 {
+    width: 50%
+}
+
+.cl-m-5 {
+    width: 41.66666667%
+}
+
+.cl-m-4 {
+    width: 33.33333333%
+}
+
+.cl-m-3 {
+    width: 25%
+}
+
+.cl-m-2 {
+    width: 16.66666667%
+}
+
+.cl-m-1 {
+    width: 8.33333333%
+}
+
+/* 3/ Système de placement par la droite 
+   ===================================== */
+
+.cl-m-pull-12 {
+    right: 100%
+}
+
+.cl-m-pull-11 {
+    right: 91.66666667%
+}
+
+.cl-m-pull-10 {
+    right: 83.33333333%
+}
+
+.cl-m-pull-9 {
+    right: 75%
+}
+
+.cl-m-pull-8 {
+    right: 66.66666667%
+}
+
+.cl-m-pull-7 {
+    right: 58.33333333%
+}
+
+.cl-m-pull-6 {
+    right: 50%
+}
+
+.cl-m-pull-5 {
+    right: 41.66666667%
+}
+
+.cl-m-pull-4 {
+    right: 33.33333333%
+}
+
+.cl-m-pull-3 {
+    right: 25%
+}
+
+.cl-m-pull-2 {
+    right: 16.66666667%
+}
+
+.cl-m-pull-1 {
+    right: 8.33333333%
+}
+
+.cl-m-pull-0 {
+    right: auto
+}
+
+/* 4/ Système de placement par la gauche 
+   ===================================== */
+
+.cl-m-push-12 {
+    left: 100%
+}
+
+.cl-m-push-11 {
+    left: 91.66666667%
+}
+
+.cl-m-push-10 {
+    left: 83.33333333%
+}
+
+.cl-m-push-9 {
+    left: 75%
+}
+
+.cl-m-push-8 {
+    left: 66.66666667%
+}
+
+.cl-m-push-7 {
+    left: 58.33333333%
+}
+
+.cl-m-push-6 {
+    left: 50%
+}
+
+.cl-m-push-5 {
+    left: 41.66666667%
+}
+
+.cl-m-push-4 {
+    left: 33.33333333%
+}
+
+.cl-m-push-3 {
+    left: 25%
+}
+
+.cl-m-push-2 {
+    left: 16.66666667%
+}
+
+.cl-m-push-1 {
+    left: 8.33333333%
+}
+
+.cl-m-push-0 {
+    left: auto
+}
+
+/* 5/ Système de saut de colonne 
+   ============================= */
+
+.cl-m-offset-12 {
+    margin-left: 100%
+}
+
+.cl-m-offset-11 {
+    margin-left: 91.66666667%
+}
+
+.cl-m-offset-10 {
+    margin-left: 83.33333333%
+}
+
+.cl-m-offset-9 {
+    margin-left: 75%
+}
+
+.cl-m-offset-8 {
+    margin-left: 66.66666667%
+}
+
+.cl-m-offset-7 {
+    margin-left: 58.33333333%
+}
+
+.cl-m-offset-6 {
+    margin-left: 50%
+}
+
+.cl-m-offset-5 {
+    margin-left: 41.66666667%
+}
+
+.cl-m-offset-4 {
+    margin-left: 33.33333333%
+}
+
+.cl-m-offset-3 {
+    margin-left: 25%
+}
+
+.cl-m-offset-2 {
+    margin-left: 16.66666667%
+}
+
+.cl-m-offset-1 {
+    margin-left: 8.33333333%
+}
+
+/* 6/ Media Queries
+   ================ */
+
+@media (min-width:992px) {
+    .cl-d-1, .cl-d-10, .cl-d-11, .cl-d-12, .cl-d-2, .cl-d-3, .cl-d-4, .cl-d-5, .cl-d-6, .cl-d-7, .cl-d-8, .cl-d-9 {
+        float: left
+    }
+    .cl-d-12 {
+        width: 100%
+    }
+    .cl-d-11 {
+        width: 91.66666667%
+    }
+    .cl-d-10 {
+        width: 83.33333333%
+    }
+    .cl-d-9 {
+        width: 75%
+    }
+    .cl-d-8 {
+        width: 66.66666667%
+    }
+    .cl-d-7 {
+        width: 58.33333333%
+    }
+    .cl-d-6 {
+        width: 50%
+    }
+    .cl-d-5 {
+        width: 41.66666667%
+    }
+    .cl-d-4 {
+        width: 33.33333333%
+    }
+    .cl-d-3 {
+        width: 25%
+    }
+    .cl-d-2 {
+        width: 16.66666667%
+    }
+    .cl-d-1 {
+        width: 8.33333333%
+    }
+    .cl-d-pull-12 {
+        right: 100%
+    }
+    .cl-d-pull-11 {
+        right: 91.66666667%
+    }
+    .cl-d-pull-10 {
+        right: 83.33333333%
+    }
+    .cl-d-pull-9 {
+        right: 75%
+    }
+    .cl-d-pull-8 {
+        right: 66.66666667%
+    }
+    .cl-d-pull-7 {
+        right: 58.33333333%
+    }
+    .cl-d-pull-6 {
+        right: 50%
+    }
+    .cl-d-pull-5 {
+        right: 41.66666667%
+    }
+    .cl-d-pull-4 {
+        right: 33.33333333%
+    }
+    .cl-d-pull-3 {
+        right: 25%
+    }
+    .cl-d-pull-2 {
+        right: 16.66666667%
+    }
+    .cl-d-pull-1 {
+        right: 8.33333333%
+    }
+    .cl-d-pull-0 {
+        right: auto
+    }
+    .cl-d-push-12 {
+        left: 100%
+    }
+    .cl-d-push-11 {
+        left: 91.66666667%
+    }
+    .cl-d-push-10 {
+        left: 83.33333333%
+    }
+    .cl-d-push-9 {
+        left: 75%
+    }
+    .cl-d-push-8 {
+        left: 66.66666667%
+    }
+    .cl-d-push-7 {
+        left: 58.33333333%
+    }
+    .cl-d-push-6 {
+        left: 50%
+    }
+    .cl-d-push-5 {
+        left: 41.66666667%
+    }
+    .cl-d-push-4 {
+        left: 33.33333333%
+    }
+    .cl-d-push-3 {
+        left: 25%
+    }
+    .cl-d-push-2 {
+        left: 16.66666667%
+    }
+    .cl-d-push-1 {
+        left: 8.33333333%
+    }
+    .cl-d-push-0 {
+        left: auto
+    }
+    .cl-d-offset-12 {
+        margin-left: 100%
+    }
+    .cl-d-offset-11 {
+        margin-left: 91.66666667%
+    }
+    .cl-d-offset-10 {
+        margin-left: 83.33333333%
+    }
+    .cl-d-offset-9 {
+        margin-left: 75%
+    }
+    .cl-d-offset-8 {
+        margin-left: 66.66666667%
+    }
+    .cl-d-offset-7 {
+        margin-left: 58.33333333%
+    }
+    .cl-d-offset-6 {
+        margin-left: 50%
+    }
+    .cl-d-offset-5 {
+        margin-left: 41.66666667%
+    }
+    .cl-d-offset-4 {
+        margin-left: 33.33333333%
+    }
+    .cl-d-offset-3 {
+        margin-left: 25%
+    }
+    .cl-d-offset-2 {
+        margin-left: 16.66666667%
+    }
+    .cl-d-offset-1 {
+        margin-left: 8.33333333%
+    }
+    .cl-d-offset-0 {
+        margin-left: 0
+    }
+}
+
+/* =========================================================
+                        Partie IV
+        Navigateur, Boutons et Footer standardisé                         
+   =========================================================
+
+      Sommaire 
+      ==================================================
+
+      1/ Footer
+      2/ Navigateur
+      3/ Boutons
+      4/ Formulaire si besoin (à enlever !!!!!!SINON ATTENTION!!!!)
+
+     =================================================== */
+
+/* 1/ Footer 
+   ========= */
+
+.footer1 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    border: 2px solid #ccc;
+    background-color: transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .1);
+}
+
+.footer2 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 200px;
+    padding: 7px 0;
+    margin: 3px 0 0;
+    font-size: 12px;
+    text-align: left;
+    list-style: none;
+    border: 4px solid #ccc;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .1);
+}
+
+/* 2/ Navigateur 
+   ============= */
+
+.navbar1 {
+    background-image: url(/home/kloporth/Bureau/1350902909-30185000.jpg);
+    padding: 10px 15px;
+    margin-top: 8px;
+    margin-right: -15px;
+    margin-bottom: 8px;
+    margin-left: -15px;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    box-shadow: inset 0 3px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .1);
+}
+
+/* ==================================================================================
+=====================================================================================
+====                                                                             ====
+====        Merci à tous pour avoir lu notre Projet de FrameWorks CSS            ====
+====            Projet créé par Seifi, César, Sophie et Johny                    ====
+====                        SimplOnMars Novembre 2016                            ====
+====                                                                             ====
+====                            Broly se retient                                 ====
+====                                                                             ====
+====                                                                             ====
+=====================================================================================
+=====================================================================================
+====  Pour le chiffre rond, sinon c'est pas bien; Merci encore ;) ================ */
